@@ -1,8 +1,8 @@
 
 
 jQuery(document).ready(function ($) {
-    const actionUrl = "http://api.openweathermap.org/data/2.5/weather?zip=11433&units=metric&appid=f33853f217c0c2bd36db3063d7a92cbf";
-
+    
+     const actionUrl =url="https://jsonplaceholder.typicode.com/todos/1";
     const data = [
         { id: 56, parentId: 62, label: "menu item 56", action: actionUrl },
         { id: 81, parentId: 80, label: "menu item 81", action: actionUrl },
@@ -85,11 +85,12 @@ jQuery(document).ready(function ($) {
 
     //call service
     function doAjax(url) {
+       
         $.ajax({
             url: url,
             dataType: "jsonp",
             success: function (response) {
-                alert("temperature : " + response.main.temp);
+                alert(response.title);
             }
 
         });
